@@ -3,13 +3,13 @@
 	"displayName": "FindJump2",
 	"description": "Like Ace Jump & Find => Jump. Quickly move cursor to visible location, including start/end of character/word.",
 	"version": "0.1.2",
-	"publisher": "kaysonwu666",
+	"publisher": "ojddjo",
 	"engines": {
 		"vscode": "^1.57.0"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/leokayson/vscode-find-jump"
+		"url": "https://github.com/ojddjo/vscode-find-jump"
 	},
 	"categories": [
 		"Other"
