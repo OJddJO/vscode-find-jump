@@ -23,10 +23,9 @@ export class InlineInput {
 		);
 	}
 
-	public updateStatusBar = (text: string, numberOfMatches: number, activityIndicatorState: boolean): void => {
-		const indicator = activityIndicatorState ? '⚪' : '🔴';
+	public updateStatusBar = (text: string, numberOfMatches: number): void => {
 		// ┆ ┇ ┣ ┫ ╏ ▎▐ ░ ▒ ▓
-		this.statusBarItem.text = `┣ ${text} ┫ Matches: ${numberOfMatches} ${indicator}`;
+		this.statusBarItem.text = `Matches: ${numberOfMatches} | ${text}`;
 		this.statusBarItem.show();
 	};
 

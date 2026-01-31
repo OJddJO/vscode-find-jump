@@ -14,7 +14,6 @@ export class FindJump2 {
 	userInput = "";
 	textEditor!: TextEditor;
 	associationManager = new AssociationManager();
-	activityIndicatorState = false;
 	numberOfMatches = 0;
 	decorationOptions: DecorationOptions[] = [];
 	dim?: TextEditorDecorationType;
@@ -222,16 +221,13 @@ export class FindJump2 {
 		const callback = (): void => {
 			this.inlineInput.updateStatusBar(
 				this.userInput,
-				this.numberOfMatches,
-				this.activityIndicatorState
+				this.numberOfMatches
 			);
-			this.activityIndicatorState = !this.activityIndicatorState;
 		};
 
 		this.inlineInput.updateStatusBar(
 			this.userInput,
-			this.numberOfMatches,
-			this.activityIndicatorState
+			this.numberOfMatches
 		);
 
 		if (this.intervalHandler === undefined) {
