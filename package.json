@@ -1,6 +1,6 @@
 {
-	"name": "find-jump-2",
-	"displayName": "FindJump2",
+	"name": "findAndJump",
+	"displayName": "FindJump",
 	"description": "Like Ace Jump & Find => Jump. Quickly move cursor to visible location, including start/end of character/word.",
 	"version": "0.0.1",
 	"publisher": "ojddjo",
@@ -36,82 +36,82 @@
 	],
 	"main": "./dist/extension",
 	"activationEvents": [
-		"onCommand:findJump2.activateCharStart",
-		"onCommand:findJump2.activateCharEnd",
-		"onCommand:findJump2.activateWordStart",
-		"onCommand:findJump2.activateWordEnd",
-		"onCommand:findJump2.activateCharStartSelection",
-		"onCommand:findJump2.activateCharEndSelection",
-		"onCommand:findJump2.activateWordStartSelection",
-		"onCommand:findJump2.activateWordEndSelection",
-		"onCommand:findJump2.cancel",
-		"onCommand:findJump2.backspace"
+		"onCommand:findAndJump.activateCharStart",
+		"onCommand:findAndJump.activateCharEnd",
+		"onCommand:findAndJump.activateWordStart",
+		"onCommand:findAndJump.activateWordEnd",
+		"onCommand:findAndJump.activateCharStartSelection",
+		"onCommand:findAndJump.activateCharEndSelection",
+		"onCommand:findAndJump.activateWordStartSelection",
+		"onCommand:findAndJump.activateWordEndSelection",
+		"onCommand:findAndJump.cancel",
+		"onCommand:findAndJump.backspace"
 	],
 	"contributes": {
 		"configuration": {
-			"title": "FindJump2",
+			"title": "findAndJump",
 			"properties": {
-				"findJump2.jumpChars": {
+				"findAndJump.jumpChars": {
 					"type": "string",
 					"default": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,./l;'p[]",
 					"markdownDescription": "Use custom alphabet for jump chars. The order is important. Default value is assigned with qwerty keyboard in mind (Particularly, home row keys `A S D F J K L ;` put up front)."
 				},
-				"findJump2.excludeNextChars": {
+				"findAndJump.excludeNextChars": {
 					"type": "number",
 					"default": 3,
 					"description": "Letters are used to type text where to go but also as symbols for quick jump. This setting controls how many next character of the current match will be excluded from being used as a symbol for a jump."
 				},
-				"findJump2.positionAbsolute": {
+				"findAndJump.positionAbsolute": {
 					"type": "boolean",
 					"default": true,
 					"description": "When enabled - position decorations on top of the editor text (without shifting text)."
 				},
-				"findJump2.onlyVisibleRanges": {
+				"findAndJump.onlyVisibleRanges": {
 					"type": "boolean",
 					"default": true,
 					"description": "When enabled - will search only in visible text in editor."
 				},
-				"findJump2.dimWhenActive": {
+				"findAndJump.dimWhenActive": {
 					"type": "boolean",
 					"default": true,
 					"description": "When enabled - will show code as gray-scale to see matches more easily."
 				},
-				"findJump2.activateToToggle": {
+				"findAndJump.activateToToggle": {
 					"type": "boolean",
 					"default": true,
-					"description": "When enabled - will toggle active state for default `findJump2.activate*` commands."
+					"description": "When enabled - will toggle active state for default `findAndJump.activate*` commands."
 				},
-				"findJump2.letterBackground": {
+				"findAndJump.letterBackground": {
 					"type": "string",
 					"default": "#4169E1",
 					"description": "Background color of the extension's main decoration: letter to jump.",
 					"format": "color"
 				},
-				"findJump2.letterForeground": {
+				"findAndJump.letterForeground": {
 					"type": "string",
 					"default": "#ffffff",
 					"description": "Color of the extension's main decoration: letter to jump.",
 					"format": "color"
 				},
-				"findJump2.matchBackground": {
+				"findAndJump.matchBackground": {
 					"type": "string",
 					"default": "editor.selectionBackground",
 					"description": "",
 					"format": "color"
 				},
-				"findJump2.matchForeground": {
+				"findAndJump.matchForeground": {
 					"type": "string",
 					"default": "editorWarning.foreground",
 					"description": "",
 					"format": "color"
 				},
-				"findJump2.scrollbarMatchForeground": {
+				"findAndJump.scrollbarMatchForeground": {
 					"type": "string",
 					"default": "#4169E1",
 					"description": "Color of the matches in the scrollbar area.",
 					"format": "color"
 				},
-				"findJump2.light": {
+				"findAndJump.light": {
 					"type": "object",
 					"default": {},
 					"description": "Overwrite colors for light themes.",
@@ -146,96 +146,96 @@
 		},
 		"commands": [
 			{
-				"command": "findJump2.activateCharStart",
+				"command": "findAndJump.activateCharStart",
 				"title": "Activate in character start mode",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.activateCharEnd",
+				"command": "findAndJump.activateCharEnd",
 				"title": "Activate in character end mode",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.activateWordStart",
+				"command": "findAndJump.activateWordStart",
 				"title": "Activate in word start mode",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.activateWordEnd",
+				"command": "findAndJump.activateWordEnd",
 				"title": "Activate in word end mode",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.activateCharStartSelection",
+				"command": "findAndJump.activateCharStartSelection",
 				"title": "Activate in character start selection mode",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.activateCharEndSelection",
+				"command": "findAndJump.activateCharEndSelection",
 				"title": "Activate in character end selection mode",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.activateWordStartSelection",
+				"command": "findAndJump.activateWordStartSelection",
 				"title": "Activate in word start selection mode",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.activateWordEndSelection",
+				"command": "findAndJump.activateWordEndSelection",
 				"title": "Activate in word end selection mode",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.cancel",
+				"command": "findAndJump.cancel",
 				"title": "Cancel",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			},
 			{
-				"command": "findJump2.backspace",
+				"command": "findAndJump.backspace",
 				"title": "Backspace",
-				"category": "FindJump2"
+				"category": "findAndJump"
 			}
 		],
 		"keybindings": [
 			{
-				"command": "findJump2.activateCharStart",
+				"command": "findAndJump.activateCharStart",
 				"key": "alt+j s"
 			},
 			{
-				"command": "findJump2.activateCharEnd",
+				"command": "findAndJump.activateCharEnd",
 				"key": "alt+j e"
 			},
 			{
-				"command": "findJump2.activateWordStart",
+				"command": "findAndJump.activateWordStart",
 				"key": "ctrl+j s"
 			},
 			{
-				"command": "findJump2.activateWordEnd",
+				"command": "findAndJump.activateWordEnd",
 				"key": "ctrl+j e"
 			},
 			{
-				"command": "findJump2.activateCharStartSelection",
+				"command": "findAndJump.activateCharStartSelection",
 				"key": "alt+shift+j s"
 			},
 			{
-				"command": "findJump2.activateCharEndSelection",
+				"command": "findAndJump.activateCharEndSelection",
 				"key": "alt+shift+j e"
 			},
 			{
-				"command": "findJump2.activateWordStartSelection",
+				"command": "findAndJump.activateWordStartSelection",
 				"key": "ctrl+shift+j s"
 			},
 			{
-				"command": "findJump2.activateWordEndSelection",
+				"command": "findAndJump.activateWordEndSelection",
 				"key": "ctrl+shift+j e"
 			},
 			{
-				"command": "findJump2.cancel",
+				"command": "findAndJump.cancel",
 				"key": "escape",
 				"when": "findJumpActive"
 			},
 			{
-				"command": "findJump2.backspace",
+				"command": "findAndJump.backspace",
 				"key": "backspace",
 				"when": "findJumpActive && editorTextFocus"
 			}
@@ -243,11 +243,11 @@
 		"menus": {
 			"commandPalette": [
 				{
-					"command": "findJump2.cancel",
+					"command": "findAndJump.cancel",
 					"when": "never"
 				},
 				{
-					"command": "findJump2.backspace",
+					"command": "findAndJump.backspace",
 					"when": "never"
 				}
 			]
