@@ -18,14 +18,14 @@ export class InlineInput {
 		);
 
 		this.statusBarItem = window.createStatusBarItem(
-			StatusBarAlignment.Right,
-			1000,
+			StatusBarAlignment.Left,
+			-1000,
 		);
 	}
 
 	public updateStatusBar = (text: string, numberOfMatches: number): void => {
 		// ┆ ┇ ┣ ┫ ╏ ▎▐ ░ ▒ ▓
-		this.statusBarItem.text = `Matches: ${numberOfMatches} | ${text}`;
+		this.statusBarItem.text = `Matches: ${numberOfMatches} ┆ ${text} ┆`;
 		this.statusBarItem.show();
 	};
 
