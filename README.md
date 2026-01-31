@@ -1,4 +1,4 @@
-> This is a fork (kind of) of https://github.com/usernamehw/vscode-find-jump. Changes between this and the original repo should be reflected in the [CHANGELOG](https://github.com/leokayson/vscode-find-jump/blob/master/CHANGELOG.md) file.
+> This is a fork of https://github.com/leokayson/vscode-find-jump.
 
 Find-Jump works when you type a sequence of characters so that it can narrow down the location to where you want to jump.
 

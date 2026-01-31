@@ -2,7 +2,7 @@
 	"name": "find-jump-2",
 	"displayName": "FindJump2",
 	"description": "Like Ace Jump & Find => Jump. Quickly move cursor to visible location, including start/end of character/word.",
-	"version": "0.1.2",
+	"version": "0.0.1",
 	"publisher": "ojddjo",
 	"engines": {
 		"vscode": "^1.57.0"
